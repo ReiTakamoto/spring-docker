@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+  <mirrors>
+    <mirror>
+      <id>myteam-nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <!-- CHANGE HERE by your team own nexus server -->
+      <url>http://172.16.253.106:8081/repository/maven-public/</url>
+    </mirror>
+  </mirrors>
+
+  <activeProfiles>
+    <activeProfile>myteam-nexus</activeProfile>
+  </activeProfiles>
+
+  <profiles>
+    <profile>
+      <id>myteam-nexus</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://172.16.253.106:8081/repository/maven-public/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://172.16.253.106:8081/repository/maven-public/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+</settings>
