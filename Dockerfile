@@ -10,7 +10,6 @@ copy maven/settings.xml /usr/share/maven/ref/
 copy . /usr/src/
 
 workdir /usr/src/
-run mvn -B -f /tmp/pom.xml -s /usr/share/maven/ref/settings.xml dependency:resolve
 run mvn -B --settings /usr/share/maven/ref/settings.xml package
 
 FROM tomcat:9.0
